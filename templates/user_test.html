@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static',filename='styles.css')}}>
+    <title>Document</title>
+</head>
+<body>
+    <div class="headerimage">
+        <image src="{{ url_for('static', filename='homephoto.jpg')}}"/>
+    </div>
+    <div>
+    <h1>Anime Images!!</h1>
+    <table>
+        <tr>
+            
+            <th>Name</th>
+            
+        </tr>
+        {% for i in results %} 
+
+    <div class="image_page">
+        <tr>
+            <th><a href="/anime/{{i[0]}}">{{i[1]}}</a></th>
+            
+        </tr>
+    </div>
+        {% endfor %}
+        
+    </table>
+    </div>
+    
+</body>
+</html>
+
+<!--https://fonts.google.com/-->
