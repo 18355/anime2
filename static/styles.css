@@ -1,12 +1,238 @@
 body {
-    background-color: rgb(57, 58, 65);
+  background-color: rgb(57, 58, 65);
+  color: white;
 }
 
 h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 50px;
+  font-family: OCR A Std, monospace;
+  text-shadow: 0 0 0.5em currentColor;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(194, 184, 184); 
 }
 
 .headerimage {
-    text-align: center;
+  text-align: center;
+  
 }
+
+.headerimage img{
+  border-radius: 80px;
+}
+
+/*---------------nav---------------------------*/
+
+.nav {
+  background-color:  rgb(71, 71, 77);
+  border-radius: 30px;
+} 
+
+.nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 50px;
+}
+
+.nav li{
+  
+  display: inline-block;
+  margin:-20px 65px 10px;
+  text-align: center;
+  font-family: OCR A Std, monospace;
+}
+
+.nav li h3{
+  padding: 9px 25px;
+  background-color: rgb(38, 38, 43);
+  border-radius: 30px;
+}
+
+.nav img{
+  height:90px;
+  width:90px;
+  position: relative;
+  top: 35px;
+}
+
+/*---------------nav fin--------------------------*/
+
+/*---------------grid ---------------------------*/
+
+.grid-anime {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  
+}
+
+.grid-anime h3{
+  text-align: center;
+  font-family: OCR A Std, monospace;
+  font-size: 25px;
+  text-shadow: 0 0 0.5em rgb(175, 175, 175);
+}
+
+.grid-anime .title {
+  position: relative;
+
+  display: block;
+}
+
+.grid-anime .title img, .grid-anime .title p {
+  position: absolute;
+  border-radius: 10px;
+}
+
+ .grid-anime .title img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.grid-anime img {
+  height: 300px;
+  width: 330px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  
+}
+
+/* .grid-anime .title p {
+  display: block;
+  margin: 0;
+  z-index: -1;
+}
+
+.grid-anime .title img:hover ~ p {
+  top: 100%;
+} 
+
+.grid-anime p{
+  text-align: center;
+  font-family: OCR A Std, monospace;
+  font-size: 15px;
+  margin: 100px;
+  margin-top: 15px;
+  color: rgb(57, 58, 65);
+  z-index: inherit;
+  
+} */
+  
+/* ------------------overlay------------------- */
+
+/* 
+.overlay{
+
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 330px;
+
+}
+
+.text {
+  color: purple;
+}
+.content:hover .overlay{
+  opacity: 0.8;
+} */
+
+/* ------------------end overlay------------------- */
+
+/*---------------grid ends---------------------------*/
+
+/*---------------activate buttons-----------------------*/
+
+.content{
+  position: relative;
+}
+
+a:link {       /*remove underline*/
+  text-decoration: none;
+  color: white;
+}
+
+a:active{
+  color: rgb(50, 44, 54);
+}
+
+a:visited{
+  color: rgb(255, 255, 255);
+}
+
+/*anime titles*/
+.content h3 a:hover{    
+  color:rgb(0, 0, 0);
+  text-shadow: 0 0 0.5em rgb(255, 255, 255);
+  width: 300px;
+  transition: 0.3s;
+}
+
+.content img{
+  cursor:pointer;
+  transition: all 0.5s;
+  filter: grayscale(0%);
+}
+
+.content img:hover{
+  transform: translateY(-25px);
+  background-color: #fff;
+  filter: grayscale(100%);
+} 
+/* .overlay{
+
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 330px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+
+.text {
+  text-align: center;
+  color: purple;
+  font-size: 40px;
+  margin-top: 200px;
+}
+.content:hover .overlay{
+  opacity: 0.8;
+  transform: translateY(-25px);
+} */
+
+
+
+ /* .content p{
+  display: block;
+  border-radius: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: -50px;
+} */
+
+
+
+/* https://www.youtube.com/watch?v=8b2mTq0Xrtw */

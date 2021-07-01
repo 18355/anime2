@@ -1,0 +1,109 @@
+
+body {
+    background-color: rgb(57, 58, 65);
+    color: rgb(255, 255, 255);
+    
+  }
+  
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: OCR A Std, monospace;
+    text-shadow: 0 0 0.5em currentColor;
+
+  }
+  
+
+.headerimage {
+    text-align: center;
+    
+}
+  
+.headerimage img{
+    border-radius: 80px;
+}
+  
+  /*---------------nav---------------------------*/
+  
+  .nav {
+    background-color:  rgb(71, 71, 77);
+    border-radius: 30px;
+  } 
+  
+  .nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+    
+  }
+  
+  .nav li{
+    
+    display: inline-block;
+    margin:-20px 65px 10px;
+    text-align: center;
+    font-family: OCR A Std, monospace;
+  }
+  
+  .nav li h3{
+    padding: 9px 25px;
+    background-color: rgb(38, 38, 43);
+    border-radius: 30px;
+  }
+  
+  .nav img{
+    height:90px;
+    width:90px;
+    position: relative;
+    top: 35px;
+  }
+  
+  /*---------------nav fin--------------------------*/
+  
+  /*---------------activation--------------------------*/
+  
+
+  a:link {       /*remove underline*/
+    text-decoration: none;
+    color: white;
+  }
+
+  a:active{
+    color: rgb(50, 44, 54);
+  }
+  
+  a:visited{
+    color: rgb(255, 255, 255);
+  }
+
+    
+  /*---------------fin activation-------------------*/
+
+  /*-------------------info part---------------------*/
+
+  .upload_image{
+      margin-left: 50px;
+  }
+
+  .info h3 {
+    color: white;
+    font-family: OCR A Std, monospace;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+  /*-------------------info fin---------------------*/
+
+  /*-------------------uploaded files---------------------*/
+
+  .uploaded_image img{
+    max-width: 700px;
+    min-width: 500px;
+    margin: 15px;
+    border-radius: 10px;
+    float: none;
+
+  }
+
+    /*-------------------uploaded files fin---------------------*/

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- ----------------nav etc------------------- -->
 <head>
     <title> Anime Website!! </title>
     <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='icon.png')}}"/>  <!--Change the favicon--> 
@@ -11,7 +10,7 @@
 </head>
 <body>
     <div class="headerimage">
-        <image src="{{ url_for('static', filename='homephoto.jpg')}}"/>
+        <a href="/anime/{{i[0]}}"><image src="/static/{{ i[5]}}.jpg"/></a>
     </div>
 
     <div class="nav">
@@ -26,31 +25,11 @@
         </ul>
     </div>
 
+
+    {%block body%}
+    {%endblock%}
     
-<!-- --------------------nav etc fin-------------------------- -->
-    
-  
-<link rel="stylesheet" href={{url_for('static',filename='styles.css')}}>
-
-<h1>Anime Images!</h1>
-
-<div class="grid-anime"><!--Grid-->
-
-    {% for i in results %}
-
-    <div class="content">
-            <a class="title">
-                <h3><a href="/anime/{{i[0]}}">{{i[1]}}</a></h3>
-                <a href="/anime/{{i[0]}}"><image src="/static/{{ i[5]}}.jpg"/></a>   
-            </a>
-    </div>
-
-    {% endfor %}
-
-</div>    
-
 </body>
 </html>
 
-<!-- https://codepen.io/tobiasglaus/pen/wxepwv -->
-
+<!--https://fonts.google.com/-->

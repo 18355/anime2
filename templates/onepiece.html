@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- --------------------nav etc-------------------------- -->
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style2.css')}}">
+
+    <title> Anime Website!! </title>
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='icon.png')}}"/>  <!--Change the favicon--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+
+    {% for i in results %}
+    
+    <div class="headerimage">
+        <a href="/anime/{{i[0]}}"><image src="/static/{{ i[5]}}.jpg"/></a>
+    </div>
+    {% endfor %}
+
+
+   
+    <div class="nav">
+        <ul>
+            <li><a href="/"><image src="/static/icon.png"/></a></li>
+            <li><a href="/"><h3>Home</h3></a></li>
+            <li><a href="/"><h3>News</h3></a></li>
+            <li><a href=".html"><h3>Contact</h3></a></li>
+            <li><a href=".html"><h3>About</h3></a></li>
+            <li><a href=".html"><h3>Help</h3></a></li>
+            <li><a href=".html"><h3>Sign up</h3></a></li>
+        </ul>
+    </div>
+ 
+
+    <!-- --------------------nav etc fin-------------------------- -->
+
+
+
+
+        <div class="info"><tr>
+            <th><h1>{{ item[1]}} Images</h1> </th>  <!--Words-->
+            <th><h3>Rating: {{ item[2]}}</h3> </th>
+            <th><h3>Description: </h3></th>
+            <td><h3>{{ item[3]}}</h3></td>
+            <th><h3>Add image:</h3></th>
+             
+            <div class="upload_image">
+            <div class="row">
+               
+            
+                    <form method="post" action="/upload" enctype="multipart/form-data">   <!--Adding an image-->
+                    <input type="file" name="file" class = 'form-control' autocomplete= "off" required>
+                    <input type = "hidden" name = "id" value = "{{item[0]}}">
+                    <input type="submit" value="Upload" class = "btn btn-info">
+                    </form>
+        
+            
+            </div>
+            </div>
+
+            {% for i in pics %}
+            <div class = "uploaded_image">
+                <img src="/static/uploads/{{i[1]}}" alt="">
+                
+                <form action="/delete" method="post" enctype="multipart/form-data">   <!--deleting pictures-->
+                <input type="hidden" name="picture_id" value="{{item[0]}}">
+                <input type="submit" value="Delete" class = "btn btn-info">
+                </form>
+
+            </div>
+            {%endfor %}
+
+        </tr></div>
+
+    <div>
+
+        <!-- <img src="{{url_for('display_image', filename=filename) }}"> -->
+    </div>
+
+</body>
+</html>
+
+<!-- https://roytuts.com/upload-and-display-image-using-python-flask/ -->
+<!-- https://www.youtube.com/watch?v=I9BBGulrOmo -->
+<!-- https://stackoverflow.com/questions/42601478/flask-calling-python-function-on-button-onclick-event -->
