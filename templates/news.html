@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{%block content%}
+
+
+
+<h1>News Page!!</h1>
+
+<div class = "anime_updated">
+    <p>New anime updated! "Angels of death" is a Japanese horror adventure game by Hoshikuzu KRNKRN for Microsoft Windows and Nintendo Switch. It was created using RPG Maker and was originally released as freeware via the Den Fami Nico Game Magazine website on August 14, 2015.</p>
+    <image src="{{ url_for('static', filename='angelsofdeath.jpg')}}"/>
+</div>
+
+<h1>CHECK IT OUT!!</h1>
+<div class = "newslink">
+    <p>From <a href="/">Angels of death page</a></p>
+</div>
+
+{% endblock %}

@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- --------------------nav etc-------------------------- -->
 <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style2.css')}}">
+
     <title> Anime Website!! </title>
     <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='icon.png')}}"/>  <!--Change the favicon--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <title>Document</title>
+
+    
 </head>
 <body>
+
     <div class="headerimage">
-        <a href="/anime/{{i[0]}}"><image src="/static/{{ i[5]}}.jpg"/></a> 
+        <image src="{{ url_for('static', filename='homephoto.jpg')}}"/>
     </div>
 
+    {% for i in results %}
+    
+    <div class="headerimage">
+        <a href="/anime/{{i[0]}}"><image src="/static/{{ i[5]}}.jpg"/></a>
+    </div>
+    {% endfor %}
+
+
+   
     <div class="nav">
         <ul>
             <li><a href="/"><image src="/static/icon.png"/></a></li>
             <li><a href="/"><h3>Home</h3></a></li>
-            <li><a href="/"><h3>News</h3></a></li>
+            <li><a href="news"><h3>News</h3></a></li>
             <li><a href=".html"><h3>Contact</h3></a></li>
             <li><a href=".html"><h3>About</h3></a></li>
             <li><a href=".html"><h3>Help</h3></a></li>
@@ -25,9 +42,10 @@
         </ul>
     </div>
 
+ 
+    {% block content %}
 
-    {%block body%}
-    {%endblock%}
-    
+    {% endblock %}
+
 </body>
 </html>

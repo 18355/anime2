@@ -15,8 +15,8 @@ ALLOWED_EXTENTIONS = set(['png','jpg','jpeg', 'gif'])
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
+        db = g._database = sqlite3.connect(DATABASE)      
+    return db 
 
 @app.route("/") #homepage
 def home():
@@ -26,13 +26,22 @@ def home():
     results = cursor.fetchall()
     return render_template("user_test.html", results=results)
 
-@app.route("/") #homepage
+
+@app.route("/") #2ndpage
 def second_page():
     cursor = get_db().cursor()
     sql = ("SELECT * FROM anime")
     cursor.execute(sql)
     results = cursor.fetchall()
     return render_template("onepiece.html", results=results)
+
+@app.route("/news")
+def news():
+    return render_template("news.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 def allowed_file(filename):
@@ -70,15 +79,14 @@ def upload_image():
 
 @app.route('/delete', methods=["GET","POST"]) #delete an image
 def delete():
-    file = request.files['file']
     if request.method == "POST":
-        filename = secure_filename(file.filename)
         cursor = get_db().cursor()
         id = int(request.form["picture_id"])
-        sql = "DELETE FROM picture (filename, anime_id) VALUES (?,?);"
-        cursor.execute(sql,(filename, id,))
+        anime_id = int(request.form["anime_id"])
+        sql = "DELETE FROM picture WHERE id = ?;"
+        cursor.execute(sql,(id,))
         get_db().commit()
-    return redirect(url_for("page", anime=id))
+    return redirect(url_for("page", anime=anime_id))
 
 @app.route('/anime/<filename>')
 def display_image(filename):

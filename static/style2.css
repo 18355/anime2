@@ -83,8 +83,18 @@ h1 {
   /*-------------------info part---------------------*/
 
   .upload_image{
-      margin-left: 50px;
+    background-color: #686369; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
   }
+
 
   .info h3 {
     color: white;
@@ -96,14 +106,51 @@ h1 {
   /*-------------------info fin---------------------*/
 
   /*-------------------uploaded files---------------------*/
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
 
   .uploaded_image img{
-    max-width: 700px;
+
+    max-width: 600px;
     min-width: 500px;
     margin: 15px;
     border-radius: 10px;
-    float: none;
+  
 
   }
 
     /*-------------------uploaded files fin---------------------*/
+
+    /* ------------------news page------------------------  */
+    .anime_updated {
+      font-family: OCR A Std, monospace;
+      font-size: 25px;
+      margin-left: 50px;
+      margin-right: 70px;
+    }
+
+    .anime_updated img{
+      max-width: 800px;
+      float: right;
+    }
+
+    .anime_updated h1{
+      margin-top: 50px;
+      float: left;
+
+    }
+
+    .newslink{
+      font-family: OCR A Std, monospace;
+      font-size: 25px;
+      margin-left: 280px;
+
+    }
+
+    .newslink a{
+      color: rgb(190, 190, 255);
+
+    }
