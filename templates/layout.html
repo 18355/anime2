@@ -33,11 +33,10 @@
         <ul>
             <li><a href="/"><image src="/static/icon.png"/></a></li>
             <li><a href="/"><h3>Home</h3></a></li>
-            <li><a href="news"><h3>News</h3></a></li>
-            <li><a href="contact"><h3>Contact</h3></a></li>
-            <li><a href=".html"><h3>About</h3></a></li>
-            <li><a href=".html"><h3>Help</h3></a></li>
-            <li><a href=".html"><h3>Sign up</h3></a></li>
+            <li><a href="{{url_for('news')}}"><h3>News</h3></a></li>
+            <li><a href="{{url_for('contact')}}"><h3>Contact</h3></a></li>
+            <li><a href="{{url_for('about')}}"><h3>About</h3></a></li>
+            <li><a href="{{url_for('help')}}"><h3>Help</h3></a></li>
         </ul>
     </div>
 

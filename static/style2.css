@@ -122,6 +122,12 @@ h1 {
 
   }
 
+  .btn{
+
+    color: pink;
+
+  }
+
     /*-------------------uploaded files fin---------------------*/
 
     /* ------------------news page------------------------  */
@@ -153,4 +159,19 @@ h1 {
     .newslink a{
       color: rgb(190, 190, 255);
 
+    }
+
+
+
+    .aboutpage p {
+      font-family: OCR A Std, monospace;
+      font-size: 25px;
+      margin-left: 50px;
+      margin-right: 70px;
+    }
+
+
+    .contactlink p{
+      float: left;
+      margin-left: 800px;
     }
