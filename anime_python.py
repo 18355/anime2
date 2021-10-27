@@ -69,7 +69,7 @@ def page(anime):
     return render_template("onepiece.html", item=results, pics = pics)
 
 
-@app.route('/upload', methods=['POST'])   #upload the selected image to the page
+@app.route('/upload', methods=['POST'])   #upload the selected image to the page 
 def upload_image():
     file = request.files['file']
     if file and allowed_file(file.filename):
